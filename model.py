@@ -413,7 +413,7 @@ def input_data(env):
     return lstm_input_data, dense_input_data
 
 
-def get_result(days: int, env: object):
+def get_result(days: int, env: object = env):
     # создаем две копии среды, чтобы сравнить результаты со средневзвешенными ставками и теми, что предлагает нейросеть
     q_env = deepcopy(env)
     prediction = []
@@ -430,7 +430,7 @@ def get_result(days: int, env: object):
     return {'prediction': prediction, 'actions': actions}
 
 
-get_result(days=30, env=env)
+# get_result(days=30, env=env)
 
 if __name__ == '__main__':
-    print(get_result(days=30, env=env))
+    print(get_result(days=30))
