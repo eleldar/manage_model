@@ -5,10 +5,15 @@
 $ python3 -m venv venv
 $ . venv/bin/activate
 (venv)$ pip install -r requirements.txt
-(venv)$ python main.py
 ```
 
 ## Using
+```
+### first terminal
+(venv)$ python main.py
+### second terminal 
+(venv)$ python client.py
+```
 
-Open browser and sent `127.0.0.1:5000/n`, where `n` is number for predict day.
-API returns prediction values and actions.
+Then open browser and sent `127.0.0.1:8050`,
+where change number to predict days.
